@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body>
+    <h1>This is not confused anymore</h1>
+    <p onclick="this.innerText = 'I am clicked'">I am a paragraph</p>
+    <script>
+        const myObj = {
+            name:'kuddus Ali',
+            getFulName: function(){
+                console.log(this);
+                return 'Mr.' + this.name;
+            }
+        }
+        // myObj.getFulName();
+    const anotherObj = {
+        name: 'Biddut Ali'
+    }
+    setTimeout(function(){
+        console.log(this)
+    },1000)
+    // anotherObj.getFulName = myObj.getFulName;
+    // console.log(another.getFulName);
+
+    // myObj.getFulName();
+    // anotherObj.getFulName();
+
+    function add (a, b){
+        console.log(this);
+        return a + b;
+    }
+    add (12, 13);
+    anotherObj.sum();
+    </script>
+</body>
+</html>
